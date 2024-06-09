@@ -16,289 +16,251 @@ import {
 import { CNavGroup, CNavItem, CNavTitle } from '@coreui/react'
 
 const _nav = [
-  {
-    component: CNavItem,
-    name: 'Dashboard',
-    to: '/dashboard',
-    icon: <CIcon icon={cilSpeedometer} customClassName="nav-icon" />,
-    badge: {
-      color: 'info',
-      text: 'NEW',
-    },
-  },
+  // {
+  //   component: CNavItem,
+  //   to: '/ViewOpportunity',
+  // },
   {
     component: CNavTitle,
-    name: 'Theme',
+    name: 'Activities',
   },
   {
     component: CNavItem,
-    name: 'Colors',
+    name: 'Opportunities',
     to: '/theme/colors',
     icon: <CIcon icon={cilDrop} customClassName="nav-icon" />,
   },
   {
     component: CNavItem,
-    name: 'Typography',
+    name: 'User Management',
     to: '/theme/typography',
     icon: <CIcon icon={cilPencil} customClassName="nav-icon" />,
   },
   {
     component: CNavTitle,
-    name: 'Components',
+    name: 'Reports',
   },
   {
     component: CNavGroup,
-    name: 'Base',
+    name: 'User Activity',
     to: '/base',
     icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
     items: [
       {
         component: CNavItem,
-        name: 'Accordion',
+        name: 'Active Users',
         to: '/base/accordion',
       },
       {
         component: CNavItem,
-        name: 'Breadcrumb',
+        name: 'New Registrations',
         to: '/base/breadcrumbs',
       },
       {
         component: CNavItem,
-        name: 'Cards',
+        name: 'Retention Rates',
         to: '/base/cards',
       },
       {
         component: CNavItem,
-        name: 'Carousel',
+        name: 'User Metrics',
         to: '/base/carousels',
-      },
-      {
-        component: CNavItem,
-        name: 'Collapse',
-        to: '/base/collapses',
-      },
-      {
-        component: CNavItem,
-        name: 'List group',
-        to: '/base/list-groups',
-      },
-      {
-        component: CNavItem,
-        name: 'Navs & Tabs',
-        to: '/base/navs',
-      },
-      {
-        component: CNavItem,
-        name: 'Pagination',
-        to: '/base/paginations',
-      },
-      {
-        component: CNavItem,
-        name: 'Placeholders',
-        to: '/base/placeholders',
-      },
-      {
-        component: CNavItem,
-        name: 'Popovers',
-        to: '/base/popovers',
-      },
-      {
-        component: CNavItem,
-        name: 'Progress',
-        to: '/base/progress',
-      },
-      {
-        component: CNavItem,
-        name: 'Spinners',
-        to: '/base/spinners',
-      },
-      {
-        component: CNavItem,
-        name: 'Tables',
-        to: '/base/tables',
-      },
-      {
-        component: CNavItem,
-        name: 'Tooltips',
-        to: '/base/tooltips',
       },
     ],
   },
   {
     component: CNavGroup,
-    name: 'Buttons',
+    name: 'Proposal Statistics',
     to: '/buttons',
     icon: <CIcon icon={cilCursor} customClassName="nav-icon" />,
     items: [
       {
         component: CNavItem,
-        name: 'Buttons',
+        name: 'Posted Opportunities',
         to: '/buttons/buttons',
       },
       {
         component: CNavItem,
-        name: 'Buttons groups',
+        name: 'Proposals Submitted',
         to: '/buttons/button-groups',
       },
       {
         component: CNavItem,
-        name: 'Dropdowns',
+        name: 'Acceptance Rates',
         to: '/buttons/dropdowns',
       },
+      // {
+      //   component: CNavItem,
+      //   name: 'Most Active Users',
+      //   to: '/buttons/MostUser',
+      // },
     ],
   },
   {
     component: CNavGroup,
-    name: 'Forms',
+    name: 'Industry Insight',
     icon: <CIcon icon={cilNotes} customClassName="nav-icon" />,
     items: [
       {
         component: CNavItem,
-        name: 'Form Control',
+        name: 'Popular Categories',
         to: '/forms/form-control',
       },
       {
         component: CNavItem,
-        name: 'Select',
+        name: 'Trends',
         to: '/forms/select',
-      },
-      {
-        component: CNavItem,
-        name: 'Checks & Radios',
-        to: '/forms/checks-radios',
-      },
-      {
-        component: CNavItem,
-        name: 'Range',
-        to: '/forms/range',
-      },
-      {
-        component: CNavItem,
-        name: 'Input Group',
-        to: '/forms/input-group',
-      },
-      {
-        component: CNavItem,
-        name: 'Floating Labels',
-        to: '/forms/floating-labels',
-      },
-      {
-        component: CNavItem,
-        name: 'Layout',
-        to: '/forms/layout',
-      },
-      {
-        component: CNavItem,
-        name: 'Validation',
-        to: '/forms/validation',
       },
     ],
   },
   {
-    component: CNavItem,
-    name: 'Charts',
+    component: CNavGroup,
+    name: 'Financial Reports',
     to: '/charts',
     icon: <CIcon icon={cilChartPie} customClassName="nav-icon" />,
+    items: [
+      {
+        component: CNavItem,
+        name: 'Subscription Revenue',
+        to: 'forms/input-group',
+      },
+      {
+        component: CNavItem,
+        name: 'Revenue Breakdown',
+        to: 'forms/layout#form-grid',
+      },
+      {
+        component: CNavItem,
+        name: 'Payment History',
+        to: 'forms/range',
+      },
+    ],
   },
   {
     component: CNavGroup,
-    name: 'Icons',
+    name: 'Content Performance',
     icon: <CIcon icon={cilStar} customClassName="nav-icon" />,
     items: [
       {
         component: CNavItem,
-        name: 'CoreUI Free',
+        name: 'Opportunities',
         to: '/icons/coreui-icons',
-        badge: {
-          color: 'success',
-          text: 'NEW',
-        },
       },
       {
         component: CNavItem,
-        name: 'CoreUI Flags',
+        name: 'Engaged Opportunities',
         to: '/icons/flags',
-      },
-      {
-        component: CNavItem,
-        name: 'CoreUI Brands',
-        to: '/icons/brands',
       },
     ],
   },
   {
     component: CNavGroup,
-    name: 'Notifications',
+    name: 'System Health Monitoring',
     icon: <CIcon icon={cilBell} customClassName="nav-icon" />,
     items: [
       {
         component: CNavItem,
-        name: 'Alerts',
+        name: 'About Site',
         to: '/notifications/alerts',
       },
       {
         component: CNavItem,
-        name: 'Badges',
+        name: 'Performance Metrics',
         to: '/notifications/badges',
       },
       {
         component: CNavItem,
-        name: 'Modal',
+        name: 'Troubleshooting Reports',
         to: '/notifications/modals',
-      },
-      {
-        component: CNavItem,
-        name: 'Toasts',
-        to: '/notifications/toasts',
       },
     ],
   },
   {
-    component: CNavItem,
-    name: 'Widgets',
-    to: '/widgets',
-    icon: <CIcon icon={cilCalculator} customClassName="nav-icon" />,
-    badge: {
-      color: 'info',
-      text: 'NEW',
-    },
-  },
-  {
     component: CNavTitle,
-    name: 'Extras',
+    name: 'Premium/Enterprise User Analytics and Reporting',
   },
   {
     component: CNavGroup,
-    name: 'Pages',
+    name: 'Proposal Performance',
     icon: <CIcon icon={cilStar} customClassName="nav-icon" />,
     items: [
       {
         component: CNavItem,
-        name: 'Login',
+        name: 'Proposals Submitted',
         to: '/login',
       },
       {
         component: CNavItem,
-        name: 'Register',
+        name: 'Acceptance Rate',
         to: '/register',
       },
       {
         component: CNavItem,
-        name: 'Error 404',
+        name: 'Detailed Analytics',
         to: '/404',
-      },
-      {
-        component: CNavItem,
-        name: 'Error 500',
-        to: '/500',
       },
     ],
   },
   {
-    component: CNavItem,
-    name: 'Docs',
-    href: 'https://coreui.io/react/docs/templates/installation/',
-    icon: <CIcon icon={cilDescription} customClassName="nav-icon" />,
+    component: CNavGroup,
+    name: 'Opportunity Insights',
+    icon: <CIcon icon={cilBell} customClassName="nav-icon" />,
+    items: [
+      {
+        component: CNavItem,
+        name: 'Engagement Metrics',
+        to: '/Metrics',
+      },
+      {
+        component: CNavItem,
+        name: 'Conversion Rates',
+        to: '/ConverstaionRate',
+      },
+      {
+        component: CNavItem,
+        name: 'Average Response Time',
+        to: '/ResponseRate',
+      },
+    ],
+  },
+  {
+    component: CNavGroup,
+    name: 'Market & Industry Trends',
+    icon: <CIcon icon={cilBell} customClassName="nav-icon" />,
+    items: [
+      {
+        component: CNavItem,
+        name: 'Industries',
+        to: '/InsightIndustries',
+      },
+      {
+        component: CNavItem,
+        name: 'KPIs Tracking',
+        to: '/KPITracking',
+      },
+      {
+        component: CNavItem,
+        name: 'Target Market',
+        to: '/TargetMarket',
+      },
+    ],
+  },
+  {
+    component: CNavGroup,
+    name: 'Success Metrics',
+    icon: <CIcon icon={cilBell} customClassName="nav-icon" />,
+    items: [
+      {
+        component: CNavItem,
+        name: 'Outcome tracking',
+        to: '/OutcomeTracking',
+      },
+      {
+        component: CNavItem,
+        name: 'ROI analysis',
+        to: '/ROIAnalysis',
+      },
+    ],
   },
 ]
 

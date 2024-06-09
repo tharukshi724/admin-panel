@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React from 'react'
 import { CButton, CCard, CCardBody, CCardHeader, CCol, CRow } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
@@ -12,13 +13,13 @@ import {
 import { cilBell } from '@coreui/icons'
 import { DocsExample } from 'src/components'
 
-const Buttons = () => {
+const MostUsers = () => {
   return (
     <CRow>
       <CCol xs={12}>
         <CCard className="mb-4">
           <CCardHeader>
-            <strong>Number of opportunities posted</strong>
+            <strong>Most active users (both posters and submitters)</strong>
           </CCardHeader>
           <CRow>
             <CCol xs={12}>
@@ -36,6 +37,7 @@ const Buttons = () => {
                           },
                         ],
                       }}
+                      // eslint-disable-next-line prettier/prettier
                       labels="months"
                     />
                   </CCardBody>
@@ -49,4 +51,4 @@ const Buttons = () => {
   )
 }
 
-export default Buttons
+export default MostUsers

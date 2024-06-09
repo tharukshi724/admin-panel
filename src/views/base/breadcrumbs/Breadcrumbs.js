@@ -9,6 +9,14 @@ import {
   CRow,
   CLink,
 } from '@coreui/react'
+import {
+  CChartBar,
+  CChartDoughnut,
+  CChartLine,
+  CChartPie,
+  CChartPolarArea,
+  CChartRadar,
+} from '@coreui/react-chartjs'
 import { DocsExample } from 'src/components'
 
 const Breadcrumbs = () => {
@@ -17,54 +25,31 @@ const Breadcrumbs = () => {
       <CCol xs={12}>
         <CCard className="mb-4">
           <CCardHeader>
-            <strong>React Breadcrumb</strong>
+            <strong>Number of new registrations</strong>
           </CCardHeader>
-          <CCardBody>
-            <p className="text-body-secondary small">
-              The breadcrumb navigation provides links back to each previous page the user navigated
-              through and shows the current location in a website or an application. You don’t have
-              to add separators, because they automatically added in CSS through{' '}
-              <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/::before">
-                {' '}
-                <code>::before</code>
-              </a>{' '}
-              and{' '}
-              <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/content">
-                {' '}
-                <code>content</code>
-              </a>
-              .
-            </p>
-            <DocsExample href="components/breadcrumb">
-              <CBreadcrumb>
-                <CBreadcrumbItem>
-                  <CLink href="#">Home</CLink>
-                </CBreadcrumbItem>
-                <CBreadcrumbItem active>Library</CBreadcrumbItem>
-              </CBreadcrumb>
-              <CBreadcrumb>
-                <CBreadcrumbItem>
-                  <CLink href="#">Home</CLink>
-                </CBreadcrumbItem>
-                <CBreadcrumbItem>
-                  <CLink href="#">Library</CLink>
-                </CBreadcrumbItem>
-                <CBreadcrumbItem active>Data</CBreadcrumbItem>
-              </CBreadcrumb>
-              <CBreadcrumb>
-                <CBreadcrumbItem>
-                  <CLink href="#">Home</CLink>
-                </CBreadcrumbItem>
-                <CBreadcrumbItem>
-                  <CLink href="#">Library</CLink>
-                </CBreadcrumbItem>
-                <CBreadcrumbItem>
-                  <CLink href="#">Data</CLink>
-                </CBreadcrumbItem>
-                <CBreadcrumbItem active>Bootstrap</CBreadcrumbItem>
-              </CBreadcrumb>
-            </DocsExample>
-          </CCardBody>
+          <CRow>
+            <CCol xs={12}>
+              <CCard className="mb-4">
+                <CCard className="mb-4">
+                  <CCardBody>
+                    <CChartBar
+                      data={{
+                        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                        datasets: [
+                          {
+                            label: 'Rates',
+                            backgroundColor: '#f87979',
+                            data: [40, 20, 12, 39, 10, 40, 39, 80, 40],
+                          },
+                        ],
+                      }}
+                      labels="months"
+                    />
+                  </CCardBody>
+                </CCard>
+              </CCard>
+            </CCol>
+          </CRow>
         </CCard>
       </CCol>
     </CRow>

@@ -1,16 +1,15 @@
 import React from 'react'
 import {
   CButton,
-  CCard,
-  CCardBody,
   CCol,
   CContainer,
-  CForm,
   CFormInput,
   CInputGroup,
   CInputGroupText,
   CRow,
   CCardHeader,
+  CCard,
+  CCardBody,
 } from '@coreui/react'
 import {
   CChartBar,
@@ -20,10 +19,11 @@ import {
   CChartPolarArea,
   CChartRadar,
 } from '@coreui/react-chartjs'
-import CIcon from '@coreui/icons-react'
-import { cilLockLocked, cilUser } from '@coreui/icons'
 
-const Register = () => {
+import CIcon from '@coreui/icons-react'
+import { cilMagnifyingGlass } from '@coreui/icons'
+
+const DetailedAnalytics = () => {
   return (
     <div className="bg-body-tertiary min-vh-100 d-flex flex-row align-items-center">
       <CContainer>
@@ -31,7 +31,9 @@ const Register = () => {
           <CCol xs={12}>
             <CCard className="mb-4">
               <CCardHeader>
-                <strong>Proposal acceptance rate</strong>
+                <strong>
+                  Detailed analytics on individual proposal performance (views, interactions){' '}
+                </strong>
               </CCardHeader>
               <CCard className="mb-4">
                 <CCardBody>
@@ -40,7 +42,7 @@ const Register = () => {
                       labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
                       datasets: [
                         {
-                          label: 'GitHub Commits',
+                          label: 'Rates',
                           backgroundColor: '#f87979',
                           data: [40, 20, 12, 39, 10, 40, 39, 80, 40],
                         },
@@ -58,4 +60,4 @@ const Register = () => {
   )
 }
 
-export default Register
+export default DetailedAnalytics

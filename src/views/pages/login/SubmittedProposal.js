@@ -1,6 +1,19 @@
 import React from 'react'
-import { CButton, CCard, CCardBody, CCardHeader, CCol, CRow } from '@coreui/react'
-import CIcon from '@coreui/icons-react'
+import { Link } from 'react-router-dom'
+import {
+  CButton,
+  CCard,
+  CCardBody,
+  CCardGroup,
+  CCol,
+  CContainer,
+  CForm,
+  CFormInput,
+  CInputGroup,
+  CInputGroupText,
+  CRow,
+  CCardHeader,
+} from '@coreui/react'
 import {
   CChartBar,
   CChartDoughnut,
@@ -9,16 +22,16 @@ import {
   CChartPolarArea,
   CChartRadar,
 } from '@coreui/react-chartjs'
-import { cilBell } from '@coreui/icons'
-import { DocsExample } from 'src/components'
+import CIcon from '@coreui/icons-react'
+import { cilLockLocked, cilUser } from '@coreui/icons'
 
-const Buttons = () => {
+const SubmittedProposal = () => {
   return (
     <CRow>
       <CCol xs={12}>
         <CCard className="mb-4">
           <CCardHeader>
-            <strong>Number of opportunities posted</strong>
+            <strong>Popular categories and industries for opportunities</strong>
           </CCardHeader>
           <CRow>
             <CCol xs={12}>
@@ -49,4 +62,4 @@ const Buttons = () => {
   )
 }
 
-export default Buttons
+export default SubmittedProposal

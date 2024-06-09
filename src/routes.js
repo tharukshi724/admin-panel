@@ -34,6 +34,19 @@ const Layout = React.lazy(() => import('./views/forms/layout/Layout'))
 const Range = React.lazy(() => import('./views/forms/range/Range'))
 const Select = React.lazy(() => import('./views/forms/select/Select'))
 const Validation = React.lazy(() => import('./views/forms/validation/Validation'))
+const SubmittedProposal = React.lazy(() => import('./views/pages/login/SubmittedProposal'))
+const AcceptanceRate = React.lazy(() => import('./views/pages/register/Register'))
+const FourZeroFour = React.lazy(() => import('./views/pages/page500/DetailedAnalytics'))
+const InsightIndustries = React.lazy(() => import('./views/Trends/InsightIndustries'))
+const KPITracking = React.lazy(() => import('./views/Trends/KPITracking'))
+const TargetMarket = React.lazy(() => import('./views/Trends/TargetMarketAnalysis'))
+const ConverstaionRate = React.lazy(() => import('./views/Insights/ConverstaionRate'))
+const Metrics = React.lazy(() => import('./views/Insights/Metrics'))
+const ResponseRate = React.lazy(() => import('./views/Insights/ResponseTime'))
+const OutcomeTracking = React.lazy(() => import('./views/SuccessMetrics/OutcomeTracking'))
+const ROIAnalysis = React.lazy(() => import('./views/SuccessMetrics/ROIAnalysis'))
+const ViewOpportunity = React.lazy(() => import('./views/dashboard/ViewOpportunity'))
+const MostUser = React.lazy(() => import('./views/buttons/btn/MostUsers'))
 
 const Charts = React.lazy(() => import('./views/charts/Charts'))
 
@@ -95,6 +108,19 @@ const routes = [
   { path: '/notifications/modals', name: 'Modals', element: Modals },
   { path: '/notifications/toasts', name: 'Toasts', element: Toasts },
   { path: '/widgets', name: 'Widgets', element: Widgets },
+  { path: '/login', name: 'Widgets', element: SubmittedProposal },
+  { path: '/register', name: 'Widgets', element: AcceptanceRate },
+  { path: '/404', name: 'Widgets', element: FourZeroFour },
+  { path: '/InsightIndustries', name: 'Widgets', element: InsightIndustries },
+  { path: '/KPITracking', name: 'Widgets', element: KPITracking },
+  { path: '/TargetMarket', name: 'Widgets', element: TargetMarket },
+  { path: '/ConverstaionRate', name: 'Widgets', element: ConverstaionRate },
+  { path: '/Metrics', name: 'Widgets', element: Metrics },
+  { path: '/ResponseRate', name: 'Widgets', element: ResponseRate },
+  { path: '/OutcomeTracking', name: 'Widgets', element: OutcomeTracking },
+  { path: '/ROIAnalysis', name: 'Widgets', element: ROIAnalysis },
+  { path: '/ViewOpportunity', name: 'Widgets', element: ViewOpportunity },
+  { path: '/MostUser', name: 'Widgets', element: MostUser },
 ]
 
 export default routes

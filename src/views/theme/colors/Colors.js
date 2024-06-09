@@ -1,9 +1,21 @@
 import React, { useEffect, useState, createRef } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import { CRow, CCol, CCard, CCardHeader, CCardBody } from '@coreui/react'
 import { rgbToHex } from '@coreui/utils'
-import { DocsLink } from 'src/components'
+import {
+  CCard,
+  CCol,
+  CCardHeader,
+  CCardBody,
+  CTable,
+  CTableBody,
+  CTableDataCell,
+  CTableHead,
+  CTableHeaderCell,
+  CTableRow,
+  CButton,
+  CNavLink,
+} from '@coreui/react'
 
 const ThemeView = () => {
   const [color, setColor] = useState('rgb(255, 255, 255)')
@@ -42,6 +54,46 @@ const ThemeColor = ({ className, children }) => {
   )
 }
 
+const tableExample = [
+  {
+    jobTitle: 'Doctor',
+    JobLocation: 'Colombo',
+    WorkplaceType: 'abcd',
+    EmploymentType: 'ancd',
+  },
+  {
+    jobTitle: 'Doctor',
+    JobLocation: 'Colombo',
+    WorkplaceType: 'abcd',
+    EmploymentType: 'ancd',
+  },
+  {
+    jobTitle: 'Doctor',
+    JobLocation: 'Colombo',
+    WorkplaceType: 'abcd',
+    EmploymentType: 'ancd',
+  },
+  {
+    jobTitle: 'Doctor',
+    JobLocation: 'Colombo',
+    WorkplaceType: 'abcd',
+    EmploymentType: 'ancd',
+  },
+  {
+    jobTitle: 'Doctor',
+    JobLocation: 'Colombo',
+    WorkplaceType: 'abcd',
+    EmploymentType: 'ancd',
+  },
+  {
+    jobTitle: 'Doctor',
+    JobLocation: 'Colombo',
+    WorkplaceType: 'abcd',
+    EmploymentType: 'ancd',
+  },
+  // Additional entries
+]
+
 ThemeColor.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
@@ -51,37 +103,56 @@ const Colors = () => {
   return (
     <>
       <CCard className="mb-4">
-        <CCardHeader>
-          Theme colors
-          <DocsLink href="https://coreui.io/docs/utilities/colors/" />
-        </CCardHeader>
+        <CCardHeader>Received Opportunities</CCardHeader>
         <CCardBody>
-          <CRow>
-            <ThemeColor className="bg-primary">
-              <h6>Brand Primary Color</h6>
-            </ThemeColor>
-            <ThemeColor className="bg-secondary">
-              <h6>Brand Secondary Color</h6>
-            </ThemeColor>
-            <ThemeColor className="bg-success">
-              <h6>Brand Success Color</h6>
-            </ThemeColor>
-            <ThemeColor className="bg-danger">
-              <h6>Brand Danger Color</h6>
-            </ThemeColor>
-            <ThemeColor className="bg-warning">
-              <h6>Brand Warning Color</h6>
-            </ThemeColor>
-            <ThemeColor className="bg-info">
-              <h6>Brand Info Color</h6>
-            </ThemeColor>
-            <ThemeColor className="bg-light">
-              <h6>Brand Light Color</h6>
-            </ThemeColor>
-            <ThemeColor className="bg-dark">
-              <h6>Brand Dark Color</h6>
-            </ThemeColor>
-          </CRow>
+          <CTable align="middle" className="mb-0 border" hover responsive>
+            <CTableHead className="text-nowrap">
+              <CTableRow>
+                <CTableHeaderCell className="bg-body-tertiary text-center"></CTableHeaderCell>
+                <CTableHeaderCell className="bg-body-tertiary">Job title</CTableHeaderCell>
+                <CTableHeaderCell className="bg-body-tertiary text-center">
+                  Job location
+                </CTableHeaderCell>
+                <CTableHeaderCell className="bg-body-tertiary">Workplace type</CTableHeaderCell>
+                <CTableHeaderCell className="bg-body-tertiary text-center">
+                  Employment type
+                </CTableHeaderCell>
+                <CTableHeaderCell className="bg-body-tertiary">Activity</CTableHeaderCell>
+              </CTableRow>
+            </CTableHead>
+            <CTableBody>
+              {tableExample.map((item, index) => (
+                <CTableRow key={index}>
+                  <CTableDataCell className="text-center"></CTableDataCell>
+                  <CTableDataCell>
+                    <div>{item.jobTitle}</div>
+                    <div className="small text-body-secondary text-nowrap"></div>
+                  </CTableDataCell>
+                  <CTableDataCell className="text-center">
+                    <div className="fw-semibold">{item.JobLocation}</div>
+                  </CTableDataCell>
+                  <CTableDataCell>
+                    <div className="d-flex justify-content-between text-nowrap">
+                      <div className="fw-semibold">{item.WorkplaceType}</div>
+                    </div>
+                  </CTableDataCell>
+                  <CTableDataCell className="text-center">
+                    <div className="fw-semibold">{item.EmploymentType}</div>
+                  </CTableDataCell>
+                  <CTableDataCell>
+                    <div className="d-flex justify-content-space-between">
+                      <CButton color="success" shape="rounded-0">
+                        Approve
+                      </CButton>
+                      <CButton color="danger" shape="rounded-0">
+                        Reject
+                      </CButton>
+                    </div>
+                  </CTableDataCell>
+                </CTableRow>
+              ))}
+            </CTableBody>
+          </CTable>
         </CCardBody>
       </CCard>
     </>
